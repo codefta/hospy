@@ -1,0 +1,27 @@
+{
+  "name": "hospy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && npm install ./client",
+    "install:client": "npm install ./client",
+    "install:server": "npm install",
+    "start:server": "nodemon index.js",
+    "start:client": "cd ./client && npm start",
+    "start:all": "concurrently \"npm run start:server\" \"npm run start:client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "client": "file:client",
+    "concurrently": "^7.2.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
